@@ -19,10 +19,10 @@ jobs:
       - name: Set up Java version
         uses: actions/setup-java@v1
         with:
-          java-version: '17'
+          java-version: '8'
 
-      - name: Build with Maven
-        run: mvn clean install
+      - name: Build with gradle
+        run: gradle build
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
